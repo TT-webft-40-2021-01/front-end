@@ -9,7 +9,7 @@ const Register = (props) => {
         <label>
           Username
           <input
-            value={value}
+            value={value.username}
             onChange={change}
             name="username"
             type="text"
@@ -20,7 +20,7 @@ const Register = (props) => {
         <label>
           Password
           <input
-            value={value}
+            value={value.password}
             onChange={change}
             name="password"
             type="text"

@@ -6,6 +6,12 @@ const Login = (props) => {
         submit,
         change
     } = props
+
+    // onChange function that changes the value of the input based on the name of the targeted event
+    const onChange = evt => {
+        const { name, value } = evt.target;
+        change(name, value);
+    }
     return (
         <div className='login-container'>
             <h1>Login Page</h1>
@@ -13,23 +19,25 @@ const Login = (props) => {
                     <label>
                         Username
                         <input
-                        value={value}
-                        onChange={change}
+                        value={value.username}
+                        onChange={onChange}
                         name='username'
                         type='text'
                         placeholder='username'
                         />
                     </label>
+
                     <label>
                         Password
                         <input
-                        value={value}
-                        onChange={change}
+                        value={value.password}
+                        onChange={onChange}
                         name='password'
                         type='text'
                         placeholder='password'
                         />
                     </label>
+
                     <div className='submit-btn'>
                         <button>Submit</button>
                     </div>
