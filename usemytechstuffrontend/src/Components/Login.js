@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = (props) => {
     const {
@@ -41,8 +42,12 @@ const Login = (props) => {
                     <div className='submit-btn'>
                         <button>Submit</button>
                     </div>
+                    {/* Which route to login page works best??? */}
                     <div className='register-text'>
-                        Dont have an account? <a href=" ">Register Here</a>
+                        {/* Dont have an account? */}
+                         {/* <a href="http://localhost:3001/register">Register Here</a> */}
+                         Don't have an account?
+                         <Link to='/register'>Register</Link>
                     </div>
                 </form>
         </div>
