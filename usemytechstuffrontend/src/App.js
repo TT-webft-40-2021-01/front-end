@@ -1,6 +1,6 @@
 import "./App.css";
-import Login from './Components/Login'
-
+// import Login from './Components/Login'
+import Register from './Components/Register'
 const change = () => {
   return null
 }
@@ -13,7 +13,8 @@ function App() {
   return (
     <>
   <div className="App"></div>
-  <Login value=" " change={change} submit={submit}/>
+  {/* <Login value=" " change={change} submit={submit}/> */}
+  <Register value=" " change= {change} submit={submit}/>
   </>
 
   );
