@@ -20,10 +20,10 @@ export const POST_START = "POST_START";
 export const POST_SUCCESS = "POST_SUCCESS";
 export const POST_FAIL = "POST_FAIL";
 
-export const postOwner = (owner) => (dispatch) => {
+export const postOwner = (formValues) => (dispatch) => {
   dispatch({ type: POST_START });
   axios
-    .post("https://jsonplaceholder.typicode.com/post",owner)
+    .post("https://jsonplaceholder.typicode.com/post",formValues)
     .then((res) => {
       dispatch({ type: POST_SUCCESS, payload: res.data });
     })
