@@ -7,7 +7,7 @@ export const FETCH_FAIL = "FETCH_FAIL";
 export const fetchOwners = () => (dispatch) => {
   dispatch({ type: FETCH_START });
   axios
-    .get("")
+    .get("https://jsonplaceholder.typicode.com/users")
     .then((res) => {
       dispatch({ type: FETCH_SUCCESS, payload: res.data });
     })
@@ -20,10 +20,10 @@ export const POST_START = "POST_START";
 export const POST_SUCCESS = "POST_SUCCESS";
 export const POST_FAIL = "POST_FAIL";
 
-export const postOwner = () => (dispatch) => {
+export const postOwner = (owner) => (dispatch) => {
   dispatch({ type: POST_START });
   axios
-    .post("")
+    .post("https://jsonplaceholder.typicode.com/post",owner)
     .then((res) => {
       dispatch({ type: POST_SUCCESS, payload: res.data });
     })
