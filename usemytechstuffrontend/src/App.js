@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Login from "./Components/Login";
-import Register from "./Components/Register";
+import Login from "./Actions/Components/Login";
+import Register from "./Actions/Components/Register";
 import styled from "styled-components"
 // Initializing form values
 const initialFormValues = {
@@ -11,17 +11,23 @@ const initialFormValues = {
   role: "",
 };
 
+
 function App() {
   // Initializing state
-  const [formValues, setformValues] = useState(initialFormValues);
+  const [formValues, setFormValues] = useState(initialFormValues);
 
   // Input change function
   const inputChange = (name, value) => {
-    setformValues({
+    setFormValues({
       ...formValues,
       [name]: value,
     });
   };
+
+  // When page changes between Login and Register, forms reset to empty
+  const pageChangeReset = () => {
+    setFormValues(initialFormValues);
+  }
 
   const submit = () => {
     return null;
@@ -32,10 +38,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Login value={formValues} change={inputChange} submit={submit} />
+            <Login value={formValues} change={inputChange} pageChange={pageChangeReset} submit={submit} />
           </Route>
           <Route exact path="/register">
-            <Register value={formValues} change={inputChange} submit={submit} />
+            <Register value={formValues} change={inputChange} pageChange={pageChangeReset} submit={submit} />
           </Route>
         </Switch>
       </Router>

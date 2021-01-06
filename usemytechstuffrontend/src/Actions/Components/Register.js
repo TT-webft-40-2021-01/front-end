@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Register = (props) => {
-  const { value, submit, change } = props;
+  const { value, submit, change, pageChange } = props;
 
   // const onChange = (evt) => {
   //   const {name, value, type, checked } = evt.target;
@@ -74,7 +74,7 @@ const Register = (props) => {
           {/* Already have an account? 
           <a href={url}>Login</a> */}
           Already have an account?
-          <Link to="/">Login</Link>
+          <Link to="/" onClick= {pageChange} >Login</Link>
         </div>
       </form>
     </div>
