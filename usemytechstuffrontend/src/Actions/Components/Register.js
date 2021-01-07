@@ -76,16 +76,21 @@ const Register = (props) => {
         </StyledInputs>
         {/* Which route to login page works best??? */}
 
-        <div>
+        <StyledLoginLink>
           {/* Already have an account? 
           <a href={url}>Login</a> */}
           Already have an account?
           <Link to="/" onClick={pageChange}>
+            <br></br>
             Login
           </Link>
-        </div>
+        </StyledLoginLink>
         <StyledCopyright>
-        <h6> Copyright C.Swartz, L.Stevens 2021 </h6>
+          <h6>
+            {" "}
+            Copyright Lambda Track Team Full-Time 40,<br></br>
+            January 2021{" "}
+          </h6>
         </StyledCopyright>
       </StyledForm>
     </StyledRegisterContainer>
@@ -95,9 +100,9 @@ export default Register;
 
 const StyledRegisterContainer = styled.div`
   color: black;
-  height: auto;    //99.36vh ; //58.21rem; for my 1080p monitor
+  height: auto;
   width: auto;
-  background-color: antiquewhite;
+  background-color: antiquewhite; //purple: #D8BFD8
   display: flex;
   border: 3px solid slateblue;
   align-items: center;
@@ -107,23 +112,22 @@ const StyledRegisterContainer = styled.div`
   margin: auto;
   flex-wrap: wrap;
   flex-direction: column;
-  //Break up the differnt sections into other Style elements, and use justify content and align items (also padding (TRBL)) to move them throughout the doc
-  // Perhaps add a "copyright" or something at the very bottom, and just squeeeeesh it all the way down, extending the background
-  // Maybe keep box for the controls colored, and have a picture behind it
 `;
 
 const StyledForm = styled.form`
-height:68.5vh;
-`
+  height: 68.5vh; //currently in login page
+  //92.85vh; // for my 1440p monitor
+  // 90.2vh; //for my 1080p monitor
+`;
 
 const StyledInputs = styled.div`
   color: black;
-  height: auto; //58.21rem; for my 1080p monitor
+  height: auto;
   width: auto;
-  background-color: antiquewhite;
+  background-color: #d8bfd8; // antiquewhite; //purple: #D8BFD8
   display: flex;
   border: 3px solid slategray;
-  box-shadow: 1rem 1rem gray;
+  box-shadow: 0.3rem 0.3rem gray;
   align-items: center;
   justify-content: space-evenly;
   text-align: match-parent;
@@ -134,12 +138,11 @@ const StyledInputs = styled.div`
 `;
 
 const StyledRadioButtons = styled.div`
- color: black;
-  height: auto; //58.21rem; for my 1080p monitor
-  width: 80% ;
-  background-color: antiquewhite;
+  color: black;
+  height: auto;
+  width: 80%;
+  background-color: #d8bfd8; // antiquewhite; //purple: #D8BFD8
   display: flex;
-  border: 3px solid slategray;
   align-items: center;
   justify-content: space-evenly;
   text-align: match-parent;
@@ -147,11 +150,11 @@ const StyledRadioButtons = styled.div`
   margin: 0% 0% 0% 0%;
 `;
 
-//purple: #D8BFD8
-
-const StyledCopyright = styled.div`
-/* padding: 10% 0 0% 0 ;
-margin: 2% 0 0 0; */
+const StyledLoginLink = styled.div`
+  margin: 10% auto auto auto;
 `
 
-//GOTTA MAKE FORM CONTAINER, SET REG CONTAINER TO AUTO, FORM TO VH
+const StyledCopyright = styled.div`
+  padding: 5% 0 5% 0;
+  margin: 90% 0 0 0;
+`;
