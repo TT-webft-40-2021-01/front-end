@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import styled from "styled-components"
 const Register = (props) => {
   const { value, submit, change, pageChange } = props;
 
@@ -18,7 +18,7 @@ const Register = (props) => {
   };
 
   return (
-    <div className="register-container">
+    <StyledRegisterContainer className="register-container">
       <h1>Register Page</h1>
       <form className="register-form">
         <label>
@@ -42,7 +42,7 @@ const Register = (props) => {
             placeholder="Password"
           />
         </label>
-
+        <br></br>
         {/* Radio buttons */}
         <label>
           Renter
@@ -63,6 +63,7 @@ const Register = (props) => {
             onChange={onChange}
             checked={value.role === "owner"}
           />
+          <br></br>
         </label>
         <div className="submit-btn">
           <button>Submit</button>
@@ -77,7 +78,23 @@ const Register = (props) => {
           <Link to="/" onClick= {pageChange} >Login</Link>
         </div>
       </form>
-    </div>
+    </StyledRegisterContainer>
   );
 };
 export default Register;
+
+const StyledRegisterContainer = styled.div`
+  color: black;
+  background-color: antiquewhite;
+  display: flex;
+  border: 3px solid slateblue;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* padding: 50% 0% 50% 0%; */
+  margin: auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  //Break up the differnt sections into other Style elements, and use justify content and align items (also padding (TRBL)) to move them throughout the doc
+  // Perhaps add a "copyright" or something at the very bottom, and just squeeeeesh it all the way down, extending the background
+`
