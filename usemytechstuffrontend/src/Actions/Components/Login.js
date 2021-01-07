@@ -63,6 +63,14 @@ input {
 }
 `
 
+const Copyright = styled.footer`
+font-size: small;
+width: 100%;
+display: flex;
+justify-content: space-between;
+
+`
+
 
 const Login = (props) => {
   const { value, submit, change, pageChange } = props;
@@ -97,7 +105,7 @@ const Login = (props) => {
             value={value.password}
             onChange={onChange}
             name="password"
-            type="text"
+            type="password"
             // placeholder="here"
           />
         </Label>
@@ -110,6 +118,14 @@ const Login = (props) => {
           <Link to="/Register"  onClick= {pageChange} > Register</Link>
         </div>
       </Form>
+      <Copyright>
+        <span>
+          Copyright© TTwebft_40 
+          </span>
+          <span>
+          January 2021
+          </span>
+      </Copyright>
     </Container>
   );
 };
