@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Login from "./Actions/Components/Login";
 import Register from "./Actions/Components/Register";
-import styled from "styled-components"
+
 // Initializing form values
 const initialFormValues = {
   username: "",
