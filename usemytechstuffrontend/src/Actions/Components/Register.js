@@ -104,18 +104,17 @@ const StyledRegisterContainer = styled.div`
   width: auto;
   background-color: antiquewhite; //purple: #D8BFD8
   display: flex;
-  border: 3px solid slateblue;
   align-items: center;
   justify-content: center;
   text-align: center;
   /* padding: 50% 0% 50% 0%; */
-  margin: auto;
+  margin: 1px 1px;
   flex-wrap: wrap;
   flex-direction: column;
 `;
 
 const StyledForm = styled.form`
-  height: 68.5vh; //currently in login page
+  height: auto;  // 68.5vh; //currently in login page
   //92.85vh; // for my 1440p monitor
   // 90.2vh; //for my 1080p monitor
 `;
@@ -156,5 +155,6 @@ const StyledLoginLink = styled.div`
 
 const StyledCopyright = styled.div`
   padding: 5% 0 5% 0;
-  margin: 90% 0 0 0;
+  margin: 10% 0 0 0;
 `;
+/* To change the background color of the full page, we need to add it in the css files, either this one, or a new one */
