@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 // import Register from "./Register";
 // import './Login.css';
-
+import "./Register.css"
 // Styles
 
 const Container = styled.div`
