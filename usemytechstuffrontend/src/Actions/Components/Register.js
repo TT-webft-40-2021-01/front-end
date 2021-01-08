@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import "./Register.css"
+import "./Form.css"
 const Register = (props) => {
   const { value, submit, change, pageChange } = props;
 
